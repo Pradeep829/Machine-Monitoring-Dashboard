@@ -2,7 +2,7 @@
 
 Full-stack assignment combining a Next.js frontend and a NestJS backend to deliver a secure machine-monitoring experience with login, dashboards, detail pages, charting, and optional real-time updates.
 
-**Note:** Only admin@example.com and password123 are the valid credentials
+**Note:** Only admin@example.com and password123 are the valid credentials. Also ensure that you run both frontend and backend for this to work.
 
 ## Stack
 - Frontend: Next.js 14, React 18, Tailwind CSS, Recharts, react-select, socket.io-client
@@ -47,5 +47,4 @@ Full-stack assignment combining a Next.js frontend and a NestJS backend to deliv
 - (Optional) backend tests: `npm run test` inside `backend`
 - Manual QA: login, load dashboard, navigate to details, edit values, confirm chart and socket updates
 
-## Submission
-- Ensure both apps meet requirements, keep this README, push to a public repo, and share the link via the provided form/email.
+
