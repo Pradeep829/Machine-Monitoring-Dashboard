@@ -21,6 +21,7 @@ Full-stack assignment combining a Next.js frontend and a NestJS backend to deliv
    cd frontend
    
    npm install
+   
    npm run dev
    **http://localhost:3000**
       - Visit `/login`, sign in with the same credentials
@@ -32,6 +33,7 @@ Full-stack assignment combining a Next.js frontend and a NestJS backend to deliv
    cd backend
    
    npm install
+   
    npm run start:dev
    **http://localhost:3001**
       - `POST /login` with `admin@example.com` / `password123` → JWT  
