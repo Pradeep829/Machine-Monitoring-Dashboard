@@ -13,7 +13,7 @@ Full-stack assignment combining a Next.js frontend and a NestJS backend to deliv
 
 1. Clone repo  
   
-   git clone [https://github.com/<your-org>/<repo>.git](https://github.com/<your-org>/<repo>.git)
+   git clone -b "ssh-key"
 
    
 2. Frontend  
