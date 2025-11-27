@@ -1,6 +1,7 @@
 # Machine Monitoring Dashboard
 
 Full-stack assignment combining a Next.js frontend and a NestJS backend to deliver a secure machine-monitoring experience with login, dashboards, detail pages, charting, and optional real-time updates.
+
 **Note:** Only admin@example.com and password123 are the valid credentials
 
 ## Stack
