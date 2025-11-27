@@ -6,7 +6,6 @@ export class AuthService {
     constructor(private jwtService: JwtService) {}
 
     async validateUser(email: string, password: string): Promise<any> {
-        // Static credentials as per requirements
         if (email === "admin@example.com" && password === "password123") {
             return { email, id: 1 };
         }

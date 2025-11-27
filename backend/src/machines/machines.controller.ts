@@ -32,7 +32,6 @@ export class MachinesController {
         }
 
         const updated = await this.machinesService.updateByName(name, updateData);
-        // Emit WebSocket event for real-time update
         this.machinesGateway.emitMachineUpdate(updated);
         return updated;
     }

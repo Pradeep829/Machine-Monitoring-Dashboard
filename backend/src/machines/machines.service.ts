@@ -19,18 +19,14 @@ export class MachinesService {
     }
 
     async findByName(nameOrSlug: string): Promise<Machine> {
-        // Try to find by exact name first (case-insensitive)
         let machine = await this.machineRepository
             .createQueryBuilder("machine")
             .where("LOWER(machine.name) = LOWER(:name)", { name: nameOrSlug })
             .getOne();
 
-        // If not found, try converting slug to name format and search case-insensitively
         if (!machine) {
-            // Get all machines and find by matching slug
             const allMachines = await this.machineRepository.find();
 
-            // Convert each machine name to slug and compare
             for (const m of allMachines) {
                 const machineSlug = m.name
                     .toLowerCase()

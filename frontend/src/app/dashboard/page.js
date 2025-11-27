@@ -36,28 +36,21 @@ export default function DashboardPage() {
         }
     };
 
-    // Auto-refresh without loader, with notification
     const fetchMachinesAutoRefresh = async () => {
-        // Step 1: Show notification first and force synchronous update
         flushSync(() => {
             setAutoRefreshNotification(true);
         });
 
-        // Step 2: Wait for notification to render and be visible
         await new Promise((resolve) => setTimeout(resolve, 150));
 
-        // Step 3: Clear data - this should happen after notification is visible
         flushSync(() => {
             setMachines([]);
         });
 
-        // Step 4: Wait to show the cleared state before fetching
         await new Promise((resolve) => setTimeout(resolve, 400));
 
-        // Step 5: Now fetch and populate data
         try {
             const data = await machinesAPI.getAll();
-            // Ensure notification is still visible when data arrives
             setMachines(data);
             setError("");
         } catch (err) {
@@ -65,11 +58,9 @@ export default function DashboardPage() {
                 localStorage.removeItem("token");
                 router.push("/login");
             } else {
-                // Don't show error on auto-refresh to avoid disrupting user
                 console.error("Auto-refresh failed:", err);
             }
         } finally {
-            // Hide notification after data is loaded and visible
             setTimeout(() => {
                 setAutoRefreshNotification(false);
             }, 1500);
@@ -81,22 +72,18 @@ export default function DashboardPage() {
     };
 
     useEffect(() => {
-        // Check authentication
         const token = localStorage.getItem("token");
         if (!token) {
             router.push("/login");
             return;
         }
 
-        // Fetch machines on first load (with loader)
         fetchMachinesWithLoader();
 
-        // Set up auto-refresh every 10 seconds (without loader, with notification)
         const refreshInterval = setInterval(() => {
             fetchMachinesAutoRefresh();
         }, 10000);
 
-        // Set up WebSocket connection for real-time updates
         const socket = io("http://localhost:3001", {
             transports: ["websocket"],
         });

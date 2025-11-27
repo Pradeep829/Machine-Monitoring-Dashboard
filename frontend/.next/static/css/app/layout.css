@@ -990,7 +990,6 @@ body {
     }
     .machine-dashboard-table-main-header-button {
         margin-top: 1rem;
-        margin-left: auto !important;
     }
 }
 .hover\:bg-blue-50:hover {
