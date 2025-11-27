@@ -14,7 +14,7 @@ Full-stack assignment combining a Next.js frontend and a NestJS backend to deliv
 1. Clone repo  
   
    git clone https://github.com/<your-org>/<repo>.git
-   cd "SDE Intern assessment"
+
    
 2. Frontend  
   
