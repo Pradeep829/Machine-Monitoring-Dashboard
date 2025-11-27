@@ -23,6 +23,7 @@ Full-stack assignment combining a Next.js frontend and a NestJS backend to deliv
    npm install
    
    npm run dev
+   
    **http://localhost:3000**
       - Visit `/login`, sign in with the same credentials
    - `/dashboard` shows table (name, status, temp, energy)
@@ -35,6 +36,7 @@ Full-stack assignment combining a Next.js frontend and a NestJS backend to deliv
    npm install
    
    npm run start:dev
+   
    **http://localhost:3001**
       - `POST /login` with `admin@example.com` / `password123` → JWT  
    - Protected routes: `GET /machines`, `GET /machines/:id`, `POST /machines/:id/update`  
