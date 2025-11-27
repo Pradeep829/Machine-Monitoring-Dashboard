@@ -21,7 +21,8 @@ Full-stack assignment combining a Next.js frontend and a NestJS backend to deliv
    cd frontend
    
    npm install
-   npm run dev   # http://localhost:3000
+   npm run dev
+   # http://localhost:3000
       - Visit `/login`, sign in with the same credentials
    - `/dashboard` shows table (name, status, temp, energy)
    - Clicking a row opens `/machines/<slug>` with detail view, edit form, temperature chart, and live updates.
@@ -31,7 +32,8 @@ Full-stack assignment combining a Next.js frontend and a NestJS backend to deliv
    cd backend
    
    npm install
-   npm run start:dev   # http://localhost:3001
+   npm run start:dev
+   # http://localhost:3001
       - `POST /login` with `admin@example.com` / `password123` → JWT  
    - Protected routes: `GET /machines`, `GET /machines/:id`, `POST /machines/:id/update`  
    - Socket.IO (`machineUpdate`) available on the same host running
